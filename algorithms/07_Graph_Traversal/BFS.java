@@ -1,0 +1,1 @@
+import java.util.*; public class BFS { public static List<String> run(Map<String,List<String>>g,String s){List<String>o=new ArrayList<>();Queue<String>q=new ArrayDeque<>();Set<String>v=new HashSet<>();q.add(s);v.add(s);while(!q.isEmpty()){String u=q.poll();o.add(u);for(String n:g.getOrDefault(u,List.of()))if(v.add(n))q.add(n);}return o;} }

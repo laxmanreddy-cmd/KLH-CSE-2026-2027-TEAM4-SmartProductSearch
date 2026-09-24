@@ -1,0 +1,1 @@
+import java.util.*; public class SeparateChaining { List<String>[] table; public SeparateChaining(int n){table=new List[n];for(int i=0;i<n;i++)table[i]=new ArrayList<>();} void add(String s){table[Math.floorMod(s.hashCode(),table.length)].add(s);} }

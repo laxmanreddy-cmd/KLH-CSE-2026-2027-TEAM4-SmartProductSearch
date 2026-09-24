@@ -1,0 +1,1 @@
+import java.util.*; public class HashMapLookup { public static String find(Map<String,String>m,String key){return m.get(key.toLowerCase());} }

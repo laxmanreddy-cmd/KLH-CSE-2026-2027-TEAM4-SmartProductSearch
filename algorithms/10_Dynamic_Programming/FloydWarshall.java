@@ -1,0 +1,1 @@
+public class FloydWarshall { public static void run(int[][]d){int n=d.length;for(int k=0;k<n;k++)for(int i=0;i<n;i++)for(int j=0;j<n;j++)if(d[i][k]<1000000&&d[k][j]<1000000)d[i][j]=Math.min(d[i][j],d[i][k]+d[k][j]);} }

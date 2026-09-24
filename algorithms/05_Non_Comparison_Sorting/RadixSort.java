@@ -1,0 +1,1 @@
+public class RadixSort { public static void sort(int[]a){int max=0;for(int x:a)max=Math.max(max,x);for(int e=1;max/e>0;e*=10){int[]c=new int[10],o=new int[a.length];for(int x:a)c[(x/e)%10]++;for(int i=1;i<10;i++)c[i]+=c[i-1];for(int i=a.length-1;i>=0;i--)o[--c[(a[i]/e)%10]]=a[i];System.arraycopy(o,0,a,0,a.length);}} }
