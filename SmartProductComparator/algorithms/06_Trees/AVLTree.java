@@ -1,0 +1,1 @@
+public class AVLTree { static class Node{String k;Node l,r;int h=1;Node(String k){this.k=k;}} static int h(Node n){return n==null?0:n.h;} static Node add(Node n,String k){if(n==null)return new Node(k);if(k.compareToIgnoreCase(n.k)<0)n.l=add(n.l,k);else if(k.compareToIgnoreCase(n.k)>0)n.r=add(n.r,k);n.h=1+Math.max(h(n.l),h(n.r));return n;} }

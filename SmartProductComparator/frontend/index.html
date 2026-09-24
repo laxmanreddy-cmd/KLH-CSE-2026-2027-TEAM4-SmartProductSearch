@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Smart Product Comparator</title><link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header class="topbar"><div class="brand"><span class="logo">SP</span><div><b>Smart Product</b><small>Search & Compare</small></div></div>
+<nav><a href="#products">Products</a><a href="#compare">Compare</a><a href="#algorithms">Algorithms</a></nav></header>
+<main>
+<section class="hero"><div><span class="eyebrow">JAVA • DSA PROJECT</span><h1>Find. Compare.<br><em>Buy smarter.</em></h1><p>Search products and compare reference prices across Amazon, Flipkart, Blinkit, Zepto, Myntra, Meesho and more from one clean dashboard.</p>
+<div class="hero-actions"><a class="primary" href="#products">Explore products</a><a class="secondary" href="#algorithms">View algorithms</a></div></div><div class="hero-card"><div class="pulse"></div><strong>24</strong><span>catalog products</span><div class="mini-row"><span>7 platforms</span><span>Java engine</span></div></div></section>
+
+<section id="products" class="section"><div class="section-head"><div><span class="eyebrow">01 / SEARCH</span><h2>Product catalog</h2></div><span id="count" class="count">Loading...</span></div>
+<div class="toolbar"><input id="search" placeholder="Search product, e.g. iPhone, shoes, shampoo..." oninput="loadProducts()"><select id="category" onchange="loadProducts()"><option>All</option></select><select id="sort" onchange="loadProducts()"><option value="relevance">Relevance / KMP</option><option value="price">Lowest price / Quick Sort</option><option value="name">Name / Merge Sort</option><option value="rating">Rating / Heap</option></select></div>
+<div id="cards" class="grid"></div></section>
+
+<section id="compare" class="section alt"><div class="section-head"><div><span class="eyebrow">02 / COMPARISON</span><h2>Compare selected products</h2></div><button class="primary small" onclick="clearCompare()">Clear</button></div>
+<p class="muted">Select up to 4 products. The table shows every available platform listing and the lowest reference price for each product.</p>
+<div id="compareArea" class="compare-empty">No products selected yet.</div></section>
+
+<section id="algorithms" class="section"><div class="section-head"><div><span class="eyebrow">03 / DSA ENGINE</span><h2>Algorithm map</h2></div><span class="status"><i></i> Java algorithms active</span></div>
+<div id="algoGrid" class="algo-grid"></div><div id="live" class="live-panel">Running algorithm checks...</div></section>
+</main>
+<footer>Smart Product Search & Recommendation System • Java backend • Demo reference prices — verify current prices on each platform.</footer>
+<script src="/app.js"></script>
+</body></html>

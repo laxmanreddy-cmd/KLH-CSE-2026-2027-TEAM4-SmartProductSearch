@@ -1,0 +1,1 @@
+public class HeapSort { public static void sort(int[]a){for(int i=a.length/2-1;i>=0;i--)heap(a,a.length,i);for(int i=a.length-1;i>0;i--){int t=a[0];a[0]=a[i];a[i]=t;heap(a,i,0);}}static void heap(int[]a,int n,int i){int m=i,l=2*i+1,r=l+1;if(l<n&&a[l]>a[m])m=l;if(r<n&&a[r]>a[m])m=r;if(m!=i){int t=a[i];a[i]=a[m];a[m]=t;heap(a,n,m);}}}

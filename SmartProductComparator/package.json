@@ -1,0 +1,8 @@
+{
+  "name": "smart-product-comparator-java",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "javac -encoding UTF-8 -d backend/bin backend/src/*.java && java -cp backend/bin Main"
+  }
+}

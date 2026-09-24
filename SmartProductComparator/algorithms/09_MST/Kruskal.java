@@ -1,0 +1,1 @@
+import java.util.*; public class Kruskal { public static int mst(int[][]e,int n){Arrays.sort(e,Comparator.comparingInt(x->x[2]));int[]p=new int[n];for(int i=0;i<n;i++)p[i]=i;int t=0;for(int[]x:e){int a=f(p,x[0]),b=f(p,x[1]);if(a!=b){p[a]=b;t+=x[2];}}return t;}static int f(int[]p,int x){return p[x]==x?x:(p[x]=f(p,p[x]));} }

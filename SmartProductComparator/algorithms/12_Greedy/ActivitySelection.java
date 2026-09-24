@@ -1,0 +1,1 @@
+import java.util.*; public class ActivitySelection { public static int count(int[][]a){Arrays.sort(a,Comparator.comparingInt(x->x[1]));int c=0,last=-1;for(int[]x:a)if(x[0]>=last){c++;last=x[1];}return c;} }

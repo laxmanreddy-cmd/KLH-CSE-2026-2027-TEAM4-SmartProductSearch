@@ -1,0 +1,1 @@
+import java.util.*; public class DFS { public static List<String> run(Map<String,List<String>>g,String s){List<String>o=new ArrayList<>();go(g,s,new HashSet<>(),o);return o;}static void go(Map<String,List<String>>g,String u,Set<String>v,List<String>o){if(!v.add(u))return;o.add(u);for(String n:g.getOrDefault(u,List.of()))go(g,n,v,o);} }

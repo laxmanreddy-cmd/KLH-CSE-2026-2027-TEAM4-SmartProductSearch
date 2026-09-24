@@ -1,0 +1,1 @@
+public class CountingSort { public static void sort(int[]a){if(a.length==0)return;int max=0;for(int x:a)max=Math.max(max,x);int[]c=new int[max+1];for(int x:a)c[x]++;int k=0;for(int i=0;i<c.length;i++)while(c[i]-->0)a[k++]=i;} }
