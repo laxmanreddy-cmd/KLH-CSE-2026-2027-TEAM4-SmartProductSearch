@@ -1,0 +1,1 @@
+Original uploaded Java files retained for reference. The new web project extends the uploaded SmartProductSearch idea with a Java HTTP backend, multi-platform links, comparison UI, and organized algorithm modules.
