@@ -2,29 +2,216 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#4f46d8"><meta name="description" content="Compare prices across popular stores and find the best deal on products you love.">
-<title>BuyWise — Compare prices, shop smarter</title><link rel="preconnect" href="https://images.unsplash.com"><link rel="stylesheet" href="/styles.css">
+<meta name="theme-color" content="#4f46d8">
+<meta name="description" content="Smart Product Comparator with Advanced Algorithmic Optimization — Compare prices and explore advanced algorithms in action.">
+<title>BuyWise — Smart Product Comparator with Advanced Algorithms</title>
+<link rel="preconnect" href="https://images.unsplash.com"><link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-<div class="announcement"><span>✦</span> Shop smarter. Compare prices across stores and save on every purchase. <a href="#products">Explore today's deals <span>→</span></a></div>
-<header class="topbar"><a class="brand" href="#home" aria-label="BuyWise home"><span class="logo"><svg viewBox="0 0 36 36" aria-hidden="true"><path d="M8 5h20v26H8z" fill="currentColor" opacity=".95"/><path d="M13 10c0 8 10 8 10 0" fill="none" stroke="#ffdc63" stroke-width="2.2" stroke-linecap="round"/><path d="M13 22h10M13 26h7" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg></span><span class="brand-name">buy<span>wise</span></span></a>
-<nav class="nav-links" aria-label="Main navigation"><a class="nav-item active" href="#products"><span>🛍️</span> Deals</a><a class="nav-item" href="#compare"><span>⚖️</span> Compare</a><a class="nav-item" href="#products"><span>✦</span> Discover</a><a class="nav-item" href="#categories"><span>▣</span> Categories</a></nav>
-<div class="header-actions"><button class="icon-button" aria-label="Jump to product search" onclick="document.getElementById('search').focus()">⌕</button><a class="login-button" href="#compare">My shortlist <span id="savedCount">0</span></a></div></header>
+<div class="announcement"><span>✦</span> Smart Product Comparator with Advanced Algorithmic Optimization — KLH CSE 2026-2027 Team 4 <a href="#algo-modules">Explore modules <span>→</span></a></div>
+<header class="topbar">
+  <a class="brand" href="#home" aria-label="BuyWise home"><span class="logo"><svg viewBox="0 0 36 36" aria-hidden="true"><path d="M8 5h20v26H8z" fill="currentColor" opacity=".95"/><path d="M13 10c0 8 10 8 10 0" fill="none" stroke="#ffdc63" stroke-width="2.2" stroke-linecap="round"/><path d="M13 22h10M13 26h7" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg></span><span class="brand-name">buy<span>wise</span></span></a>
+  <nav class="nav-links" aria-label="Main navigation">
+    <a class="nav-item active" href="#products" id="nav-deals"><span>🛍️</span> Deals</a>
+    <a class="nav-item" href="#compare" id="nav-compare"><span>⚖️</span> Compare</a>
+    <a class="nav-item" href="#advanced-search-section" id="nav-search" onclick="showModule('search')"><span>🔍</span> Search</a>
+    <a class="nav-item" href="#algo-modules" id="nav-algo"><span>⚙️</span> Algorithms</a>
+  </nav>
+  <div class="header-actions"><button class="icon-button" aria-label="Jump to product search" onclick="document.getElementById('search').focus()">⌕</button><a class="login-button" href="#compare">My shortlist <span id="savedCount">0</span></a></div>
+</header>
+
 <main id="home">
-<section class="hero"><div class="hero-content"><div class="eyebrow"><span class="sparkle">✦</span> YOUR SMARTER WAY TO SHOP</div><h1>Great finds.<br><span>Even better prices.</span></h1><p>Compare your favorite products across stores, spot a great price and shop with confidence.</p>
-<form class="searchbar" onsubmit="event.preventDefault();document.getElementById('products').scrollIntoView({behavior:'smooth'});loadProducts()"><span class="search-icon">⌕</span><input id="search" aria-label="Search products" placeholder="Search for phones, shoes, groceries…" oninput="syncSearch(this.value)"><button class="voice-search" type="button" aria-label="Search products" onclick="document.getElementById('search').focus()">⌁</button></form>
-<div class="hero-proof"><span><b>✓</b> Compare popular stores</span><span><b>✓</b> Find a price that feels right</span><span><b>✓</b> Your next great find</span></div></div><div class="hero-art" aria-hidden="true"><div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div><div class="art-card"><div class="art-label">A little more room to save</div><div class="art-price">₹ <span>899</span><i>–18%</i></div><div class="art-lines"><span></span><span></span></div><div class="art-product">🎧</div><div class="art-stores"><b>a</b><b class="flip">f</b><b class="myntra">M</b><span>3 stores compared</span></div></div><div class="float-badge badge-top">✦ Best price found</div><div class="float-badge badge-bottom">↓ Prices worth a second look</div><span class="hero-spark spark-one">✦</span><span class="hero-spark spark-two">✧</span></div></section>
+  <!-- HERO -->
+  <section class="hero"><div class="hero-content"><div class="eyebrow"><span class="sparkle">✦</span> YOUR SMARTER WAY TO SHOP</div><h1>Great finds.<br><span>Even better prices.</span></h1><p>Compare your favorite products across stores, spot a great price and shop with confidence.</p>
+  <form class="searchbar" onsubmit="event.preventDefault();document.getElementById('products').scrollIntoView({behavior:'smooth'});loadProducts()"><span class="search-icon">⌕</span><input id="search" aria-label="Search products" placeholder="Search for phones, shoes, groceries…" oninput="syncSearch(this.value)"><button class="voice-search" type="button" aria-label="Search products" onclick="document.getElementById('search').focus()">⌁</button></form>
+  <div class="hero-proof"><span><b>✓</b> Compare popular stores</span><span><b>✓</b> Find a price that feels right</span><span><b>✓</b> Advanced algorithms in action</span></div></div>
+  <div class="hero-art" aria-hidden="true"><div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div><div class="art-card"><div class="art-label">A little more room to save</div><div class="art-price">₹ <span>899</span><i>–18%</i></div><div class="art-lines"><span></span><span></span></div><div class="art-product">🎧</div><div class="art-stores"><b>a</b><b class="flip">f</b><b class="myntra">M</b><span>3 stores compared</span></div></div><div class="float-badge badge-top">✦ Best price found</div><div class="float-badge badge-bottom">↓ Prices worth a second look</div><span class="hero-spark spark-one">✦</span><span class="hero-spark spark-two">✧</span></div></section>
 
-<section id="categories" class="category-strip"><div class="category-heading"><span>Explore</span><b>Find your kind of deal</b></div><div id="categoryTiles" class="category-tiles"></div></section>
+  <!-- CATEGORIES -->
+  <section id="categories" class="category-strip"><div class="category-heading"><span>Explore</span><b>Find your kind of deal</b></div><div id="categoryTiles" class="category-tiles"></div></section>
 
-<section class="promo-row"><article class="promo-card spend-card"><div><span class="promo-kicker">MAKE EVERY RUPEE COUNT</span><h2>Little wins add up.</h2><p>Browse the catalogue and compare reference prices from stores you know.</p><a href="#products">Find your next deal <span>→</span></a></div><div class="spend-illustration" aria-hidden="true"><span>₹</span><i>✦</i></div></article><article class="promo-card compare-card"><div><span class="promo-kicker">A SMARTER SHORTLIST</span><h2>Your picks, side by side.</h2><p>Choose a few products to compare their store listings.</p><a href="#compare">Compare my picks <span>→</span></a></div><div class="compare-illustration" aria-hidden="true">⚖️</div></article></section>
+  <section class="promo-row"><article class="promo-card spend-card"><div><span class="promo-kicker">MAKE EVERY RUPEE COUNT</span><h2>Little wins add up.</h2><p>Browse the catalogue and compare reference prices from stores you know.</p><a href="#products">Find your next deal <span>→</span></a></div><div class="spend-illustration" aria-hidden="true"><span>₹</span><i>✦</i></div></article><article class="promo-card compare-card"><div><span class="promo-kicker">ADVANCED ALGORITHMS LAB</span><h2>Algorithms powering search.</h2><p>KMP, Suffix Arrays, Max Flow, DP — all running live on real product data.</p><a href="#algo-modules">Explore algorithms <span>→</span></a></div><div class="compare-illustration" aria-hidden="true">⚙️</div></article></section>
 
-<section id="products" class="section products-section"><div class="section-head"><div><span class="section-overline">A GOOD DAY TO FIND A DEAL</span><h2>Popular picks for you</h2><p class="muted">Browse all <span id="catalogTotal">—</span> products in our catalogue.</p></div><span id="count" class="count">Loading…</span></div>
-<div class="toolbar"><label class="search-small"><span>⌕</span><input id="catalogSearch" placeholder="Search all products…" aria-label="Search all products" oninput="syncSearch(this.value)"></label><select id="category" aria-label="Filter by category" onchange="setCategory(this.value)"><option>All</option></select><select id="sort" aria-label="Sort products" onchange="loadProducts()"><option value="relevance">Recommended</option><option value="price">Price: low to high</option><option value="name">Name: A to Z</option><option value="rating">Top rated</option></select></div>
-<div class="product-layout"><aside class="filters"><div class="filter-heading">Browse by category</div><button class="filter-category active" data-category="All" onclick="setCategory('All',this)">All products <span id="allCategoryCount"></span></button><div id="categoryFilters"></div><div class="filter-note"><span>✦</span><b>Friendly reminder</b><p>Prices are reference examples. Check the store listing for today's price and availability.</p></div></aside><div id="cards" class="grid"></div></div></section>
+  <!-- PRODUCTS -->
+  <section id="products" class="section products-section"><div class="section-head"><div><span class="section-overline">A GOOD DAY TO FIND A DEAL</span><h2>Popular picks for you</h2><p class="muted">Browse all <span id="catalogTotal">—</span> products in our catalogue.</p></div><span id="count" class="count">Loading…</span></div>
+  <div class="toolbar"><label class="search-small"><span>⌕</span><input id="catalogSearch" placeholder="Search all products…" aria-label="Search all products" oninput="syncSearch(this.value)"></label><select id="category" aria-label="Filter by category" onchange="setCategory(this.value)"><option>All</option></select><select id="sort" aria-label="Sort products" onchange="loadProducts()"><option value="relevance">Recommended</option><option value="price">Price: low to high</option><option value="name">Name: A to Z</option><option value="rating">Top rated</option></select></div>
+  <div class="product-layout"><aside class="filters"><div class="filter-heading">Browse by category</div><button class="filter-category active" data-category="All" onclick="setCategory('All',this)">All products <span id="allCategoryCount"></span></button><div id="categoryFilters"></div><div class="filter-note"><span>✦</span><b>Friendly reminder</b><p>Prices are reference examples. Check the store listing for today's price and availability.</p></div></aside><div id="cards" class="grid"></div></div></section>
 
-<section id="compare" class="section compare-section"><div class="section-head"><div><span class="section-overline">MAKE A SIDE BY SIDE SHORTLIST</span><h2>Compare your picks</h2><p class="muted">Select up to four products to compare their example prices and store listings.</p></div><button class="clear-button" onclick="clearCompare()">Clear shortlist</button></div><div id="compareArea" class="compare-empty"><span class="compare-empty-icon">⚖️</span><b>Your shortlist starts here</b><span>Choose “Add to compare” on a product card to see your picks side by side.</span><a href="#products">Explore popular picks <span>→</span></a></div></section>
+  <!-- COMPARE -->
+  <section id="compare" class="section compare-section"><div class="section-head"><div><span class="section-overline">MAKE A SIDE BY SIDE SHORTLIST</span><h2>Compare your picks</h2><p class="muted">Select up to four products to compare their example prices and store listings.</p></div><button class="clear-button" onclick="clearCompare()">Clear shortlist</button></div><div id="compareArea" class="compare-empty"><span class="compare-empty-icon">⚖️</span><b>Your shortlist starts here</b><span>Choose "Add to compare" on a product card to see your picks side by side.</span><a href="#products">Explore popular picks <span>→</span></a></div></section>
+
+  <!-- ============================================================ -->
+  <!-- ADVANCED ALGORITHMS MODULES                                  -->
+  <!-- ============================================================ -->
+  <section id="algo-modules" class="section algo-modules-section">
+    <div class="section-head">
+      <div><span class="section-overline">ADVANCED ALGORITHMS COURSE — CO1 TO CO6</span>
+        <h2>Algorithm Modules</h2>
+        <p class="muted">Every module runs real algorithms on real product data. Select a module below.</p>
+      </div>
+    </div>
+    <div class="algo-module-tabs">
+      <button class="algo-tab active" onclick="showModule('advisor')" id="tab-advisor">CO1 Advisor</button>
+      <button class="algo-tab" onclick="showModule('search')" id="tab-search">CO2 Search</button>
+      <button class="algo-tab" onclick="showModule('bundle')" id="tab-bundle">CO3 Bundle DP</button>
+      <button class="algo-tab" onclick="showModule('flow')" id="tab-flow">CO4 Flow</button>
+      <button class="algo-tab" onclick="showModule('np')" id="tab-np">CO5 NP Lab</button>
+      <button class="algo-tab" onclick="showModule('random')" id="tab-random">CO6 Randomized</button>
+      <button class="algo-tab" onclick="showModule('parallel')" id="tab-parallel">CO6 Parallel</button>
+    </div>
+
+    <!-- CO1 — Algorithm Advisor -->
+    <div id="module-advisor" class="algo-module active-module">
+      <div class="module-header"><div class="module-badge co1">CO1</div><div><h3>Algorithm Advisor</h3><p>Given a problem type, identify the appropriate algorithm family and why it is the right choice.</p></div></div>
+      <div class="advisor-grid">
+        <button class="advisor-card selected" onclick="selectAdvisor('search',this)"><div class="advisor-icon">🔍</div><div class="advisor-label">Product Text Search</div></button>
+        <button class="advisor-card" onclick="selectAdvisor('bundle',this)"><div class="advisor-icon">📦</div><div class="advisor-label">Product Bundle Optimisation</div></button>
+        <button class="advisor-card" onclick="selectAdvisor('assignment',this)"><div class="advisor-icon">🔄</div><div class="advisor-label">Platform Assignment</div></button>
+        <button class="advisor-card" onclick="selectAdvisor('nphard',this)"><div class="advisor-icon">🧩</div><div class="advisor-label">Difficult Optimisation (NP-Hard)</div></button>
+        <button class="advisor-card" onclick="selectAdvisor('large',this)"><div class="advisor-icon">⚡</div><div class="advisor-label">Large Dataset Processing</div></button>
+      </div>
+      <div id="advisor-result" class="advisor-result">
+        <div class="algo-loading">Select a problem type above to see algorithm recommendations.</div>
+      </div>
+    </div>
+
+    <!-- CO2 — Advanced Search -->
+    <div id="module-search" class="algo-module" id="advanced-search-section">
+      <div class="module-header"><div class="module-badge co2">CO2</div><div><h3>Advanced Product Search</h3><p>Search product data using KMP, Z-Function, Rabin-Karp and Suffix Array. Real execution time measured by the Java backend.</p></div></div>
+      <div class="search-control-row">
+        <label class="search-small" style="flex:1"><span>⌕</span><input id="adv-query" placeholder="Enter search term (e.g. wireless, iphone, laptop)…" value="wireless" oninput="clearSearchResults()"></label>
+        <div class="algo-chips">
+          <label class="algo-chip"><input type="radio" name="search-algo" value="kmp" checked> KMP</label>
+          <label class="algo-chip"><input type="radio" name="search-algo" value="z"> Z-Function</label>
+          <label class="algo-chip"><input type="radio" name="search-algo" value="rabin"> Rabin-Karp</label>
+          <label class="algo-chip"><input type="radio" name="search-algo" value="suffix"> Suffix Array</label>
+        </div>
+        <button class="run-btn" onclick="runAdvancedSearch()">▶ Run Search</button>
+        <button class="run-btn secondary" onclick="runAllSearchAlgos()">⚡ Compare All</button>
+      </div>
+      <div id="search-results" class="algo-output"></div>
+      <div id="search-explanation" class="algo-explain"></div>
+      <div id="search-products" class="grid" style="margin-top:18px"></div>
+    </div>
+
+    <!-- CO3 — Bundle Optimizer -->
+    <div id="module-bundle" class="algo-module">
+      <div class="module-header"><div class="module-badge co3">CO3</div><div><h3>Smart Bundle Optimizer</h3><p>Find the best product combination within your budget using DP strategies.</p></div></div>
+      <div class="bundle-controls">
+        <div class="control-group">
+          <label>Budget (₹)</label>
+          <input type="number" id="bundle-budget" value="50000" min="1000" step="1000" style="width:140px">
+        </div>
+        <div class="control-group">
+          <label>Categories (comma-separated, blank = all)</label>
+          <input type="text" id="bundle-categories" placeholder="Laptops,Electronics,Headphones" style="width:260px">
+        </div>
+        <div class="control-group">
+          <label>DP Algorithm</label>
+          <select id="bundle-algo">
+            <option value="bitmask">Bitmask DP — O(2ⁿ × n)</option>
+            <option value="subset">Subset DP (0-1 Knapsack) — O(n × W)</option>
+            <option value="interval">Interval DP — O(n³)</option>
+            <option value="tree">Tree DP — O(n × W)</option>
+          </select>
+        </div>
+        <button class="run-btn" onclick="runBundleOptimizer()">▶ Optimize Bundle</button>
+      </div>
+      <div id="bundle-results" class="algo-output"></div>
+      <div id="bundle-products" class="grid" style="margin-top:18px"></div>
+    </div>
+
+    <!-- CO4 — Platform Flow -->
+    <div id="module-flow" class="algo-module">
+      <div class="module-header"><div class="module-badge co4">CO4</div><div><h3>Platform Assignment — Network Flow</h3><p>Assign products to platforms under capacity constraints using Max Flow algorithms.</p></div></div>
+      <div class="flow-controls">
+        <div class="control-group">
+          <label>Algorithm</label>
+          <select id="flow-algo">
+            <option value="dinic">Dinic — O(V²E)</option>
+            <option value="edmonds">Edmonds-Karp — O(VE²)</option>
+            <option value="ford">Ford-Fulkerson — O(E × maxFlow)</option>
+          </select>
+        </div>
+        <button class="run-btn" onclick="runFlowAlgo()">▶ Run Assignment</button>
+        <button class="run-btn secondary" onclick="runAllFlowAlgos()">⚡ Compare All</button>
+      </div>
+      <div id="flow-graph-container" class="flow-graph-container">
+        <div class="algo-loading">Run an algorithm to see the flow network.</div>
+      </div>
+      <div id="flow-results" class="algo-output"></div>
+    </div>
+
+    <!-- CO5 — NP Lab -->
+    <div id="module-np" class="algo-module">
+      <div class="module-header"><div class="module-badge co5">CO5</div><div><h3>NP / NP-Hard Optimisation Lab</h3><p>Understand P, NP, NP-Complete, NP-Hard. Watch exact vs approximate solution behaviour.</p></div></div>
+
+      <div class="np-theory">
+        <div class="np-class p-class"><div class="np-label">P</div><div class="np-desc">Solvable in polynomial time. e.g. Sorting, Shortest Path, Max Flow.</div></div>
+        <div class="np-class np-class-box"><div class="np-label">NP</div><div class="np-desc">Solution verifiable in polynomial time. Includes all of P. e.g. Subset Sum.</div></div>
+        <div class="np-class npc-class"><div class="np-label">NP-Complete</div><div class="np-desc">Hardest problems in NP. Every NP problem reduces to these. e.g. 3-SAT, Vertex Cover, Independent Set.</div></div>
+        <div class="np-class nph-class"><div class="np-label">NP-Hard</div><div class="np-desc">At least as hard as NP-Complete. May not even be in NP. e.g. TSP optimisation, Halting Problem.</div></div>
+      </div>
+
+      <div class="reduction-chain">
+        <div class="reduction-step">3-SAT</div><div class="reduction-arrow">≤ₚ</div>
+        <div class="reduction-step">Vertex Cover</div><div class="reduction-arrow">≤ₚ</div>
+        <div class="reduction-step">Independent Set</div>
+      </div>
+      <p class="muted" style="margin:8px 0 18px;font-size:11px">Each problem polynomially reduces to the next. If any of these were solvable in P, all of NP would be.</p>
+
+      <div class="bundle-controls">
+        <div class="control-group">
+          <label>Budget (₹)</label>
+          <input type="number" id="np-budget" value="30000" min="1000" step="1000" style="width:140px">
+        </div>
+        <div class="control-group">
+          <label>Number of Products (n)</label>
+          <input type="number" id="np-n" value="10" min="2" max="20" style="width:80px">
+        </div>
+        <button class="run-btn" onclick="runNpLab()">▶ Run Exact + Approx</button>
+      </div>
+      <div id="np-results" class="algo-output"></div>
+    </div>
+
+    <!-- CO6 — Randomized -->
+    <div id="module-random" class="algo-module">
+      <div class="module-header"><div class="module-badge co6">CO6</div><div><h3>Randomized Algorithms</h3><p>Las Vegas always produces a correct result. Monte Carlo uses bounded computation with controllable error probability.</p></div></div>
+      <div class="bundle-controls">
+        <div class="control-group">
+          <label>k-th Smallest Price (Las Vegas)</label>
+          <input type="number" id="lv-k" value="5" min="1" max="24" style="width:80px">
+        </div>
+        <div class="control-group">
+          <label>Test Number (Monte Carlo primality)</label>
+          <input type="number" id="mc-num" value="999983" style="width:140px">
+        </div>
+        <div class="control-group">
+          <label>Witnesses (k)</label>
+          <input type="number" id="mc-witnesses" value="10" min="1" max="40" style="width:80px">
+        </div>
+        <div class="control-group">
+          <label>Random Seed</label>
+          <input type="number" id="rand-seed" value="42" style="width:100px">
+        </div>
+        <button class="run-btn" onclick="runRandomized()">▶ Run Both</button>
+      </div>
+      <div id="random-results" class="algo-output"></div>
+    </div>
+
+    <!-- CO6 — Parallel -->
+    <div id="module-parallel" class="algo-module">
+      <div class="module-header"><div class="module-badge co6">CO6</div><div><h3>Parallel Processing Lab + Work-Span Analysis</h3><p>Parallel Prefix Sum and Parallel Reduce on product price data. Honest sequential vs parallel comparison.</p></div></div>
+      <button class="run-btn" onclick="runParallel()">▶ Run Parallel Algorithms</button>
+      <div id="parallel-results" class="algo-output"></div>
+      <div id="workspan-viz" class="workspan-viz"></div>
+    </div>
+
+  </section><!-- end algo-modules -->
+
 </main>
-<footer><a class="brand footer-brand" href="#home"><span class="logo"><svg viewBox="0 0 36 36"><path d="M8 5h20v26H8z" fill="currentColor" opacity=".95"/><path d="M13 10c0 8 10 8 10 0" fill="none" stroke="#ffdc63" stroke-width="2.2" stroke-linecap="round"/><path d="M13 22h10M13 26h7" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg></span><span class="brand-name">buy<span>wise</span></span></a><p>Good choices feel even better.</p><small>Example reference prices, not live quotes. Product listings link to their respective stores.</small><a class="footer-top" href="#home">Back to top ↑</a></footer>
+
+<footer><a class="brand footer-brand" href="#home"><span class="logo"><svg viewBox="0 0 36 36"><path d="M8 5h20v26H8z" fill="currentColor" opacity=".95"/><path d="M13 10c0 8 10 8 10 0" fill="none" stroke="#ffdc63" stroke-width="2.2" stroke-linecap="round"/><path d="M13 22h10M13 26h7" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg></span><span class="brand-name">buy<span>wise</span></span></a><p>Smart Product Comparator · Advanced Algorithms Demo · KLH CSE 2026-2027 Team 4</p><small>Example reference prices. Algorithms run on real product data in the Java backend.</small><a class="footer-top" href="#home">Back to top ↑</a></footer>
+
 <script src="/app.js"></script>
 </body></html>
